@@ -1,0 +1,165 @@
+.search_input {
+    height: 40px;
+}
+
+/* 内容区 */
+#content {
+    margin-bottom: 60px;
+}
+#content .hemai_jx + .hemai_jx {
+    margin-top: 50px;
+}
+
+/* 黑马精选 */
+.hemai_jx {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.hemai_jx::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.jx_top {
+    width: 1200px;
+    height: 35px;
+    line-height: 35px;
+    margin: 35px auto 0;
+    border-bottom: 2px solid #ffc900;
+}
+.jx_tit, .jx_tabs {
+    float: left;
+}
+.jx_tit {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+}
+.jx_tit img {
+    vertical-align: top;
+    float: left;
+}
+.jx_tabs {
+    list-style: none;
+    margin-bottom: 0;
+    height: 35px;
+    margin-left: 60px;
+}
+.jx_tabs li {
+    float: left;
+    height: 35px;
+    position: relative;
+}
+.jx_tabs li span {
+    display: inline-block;
+    width: 110px;
+    height: 33px;
+    border: 1px solid #f0f0f0;
+    border-bottom: none;
+    transform: skew(-30deg);
+}
+.jx_tabs li a {
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    z-index: 99;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.jx_tabs .active span {
+    background: #ffc900;
+    border: none;
+}
+.jx_tabs .active a {
+    color: #fff;
+}
+
+/* 卡片内容 */
+.jx_content .row, .guone_r .row {
+    margin-right: -8px;
+}
+.jx_content .row::after, .guone_r .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.jx_content a, .guone_r a {
+    text-decoration: none;
+    display: block;
+}
+.jx_content .has_border, .guone_r .has_border {
+    border: 1px solid #eee;
+    border-top: none;
+    padding: 8px 10px 12px;
+    background: #fff;
+}
+.jx_content h3, .guone_r h3 {
+    margin: 8px 0;
+    padding-right: 5px;
+    font-size: 13px;
+    color: #000;
+    line-height: 22px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.jx_content img, .guone_r .row img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.price {
+    font-size: 12px;
+    color: #666;
+    padding-bottom: 17px;
+}
+.price em {
+    font-size: 12px;
+    font-style: normal;
+    color: #ff4848;
+}
+.price strong {
+    font-size: 18px;
+    color: #ff4848;
+}
+.tab-content {
+    margin-top: 10px;
+}
+
+/* 国内游 / 境外游 */
+.heima_gn {
+    width: 100%;
+    overflow: hidden;
+}
+.heima_gn::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.guonei_l {
+    float: left;
+    width: 360px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.guone_r {
+    float: left;
+    width: 790px;
+}
+.guone_r .row > div {
+    margin-top: 15px;
+}
+
+.fl {
+    float: left;
+}

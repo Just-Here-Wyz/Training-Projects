@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  操作数据库  -->
+<mapper namespace="com.itheima.dao.UserMapper">
+    <!--  数据库和字段一一对应   左边是实体类  右边是数据库字段名称  -->
+    <resultMap id="userMap" type="com.itheima.domain.User">
+        <id property="uid" column="uid"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="birthday" column="birthday"/>
+        <result property="sex" column="sex"/>
+        <result property="telephone" column="telephone"/>
+        <result property="email" column="email"/>
+        <result property="status" column="status"/>
+        <result property="code" column="code"/>
+    </resultMap>
+
+
+
+
+    <!--  查询用户名是否存在  -->
+    <select id="findbyTelephone" resultType="boolean">
+        select count(1) > 0 from tab_user where telephone = #{telephone}
+    </select>
+
+
+
+    <!--  注册用户    新增用户的数据库语句-->
+    <insert id="save" parameterType="com.itheima.domain.User">
+        insert into tab_user(telephone,password,nickname,sex,status,code,regist_time,update_time)
+        values(#{telephone},#{password},#{nickname},#{sex},#{status},#{code},#{registTime},#{updateTime})
+    </insert>
+
+
+</mapper>
